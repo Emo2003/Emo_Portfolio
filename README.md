@@ -1,39 +1,27 @@
-#  Personal Portfolio
+# Eman Medhat — Portfolio
 
-A sleek, responsive, and cross-platform personal portfolio website built with **Flutter Web**. Designed to showcase software engineering projects, technical skills, and professional background with a clean, modern aesthetic.
+Minimalist portfolio built with **Flutter Web** to present mobile applications, software engineering projects, and technical skills.
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Portfolio-blue?style=for-the-badge&logo=githubpages&logoColor=white)](https://emo2003.github.io/Emo_Portfolio/)
-[![Flutter](https://img.shields.io/badge/Built_With-Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev)
-
----
-
-##  Live Demo
-
-Check out the live interactive website:  
- **[emo2003.github.io/Emo_Portfolio](https://emo2003.github.io/Emo_Portfolio/)**
+🔗 **[Live Demo](https://emo2003.github.io/Emo_Portfolio/)**
 
 ---
 
-##  Features
-
-*  **Fully Responsive Layout:** Optimized for mobile, tablet, and desktop viewports.
-*  **Modern UI/UX:** Clean typography, tailored color schemes, and seamless component architecture.
-*  **Smooth Navigation:** Fluid scrolling animations and intuitive section routing.
-*  **Project Showcase:** Highlights real-world applications with direct links to code repositories and live demos.
-*  **Contact Section:** Direct channels to connect for collaboration and professional opportunities.
+### Features
+* **Adaptive Design:** Scales across mobile, tablet, and desktop screens.
+* **Projects & Skills:** Interactive showcase of Flutter applications and technical experience.
+* **Direct Contact:** Quick links for professional connections and collaboration.
 
 ---
 
-##  Tech Stack & Architecture
-
-* **Framework:** [Flutter](https://flutter.dev/) (Web)
-* **Language:** [Dart](https://dart.dev/)
-* **Architecture:** Clean, modular widget hierarchy for scalable maintainability.
-* **Deployment:** GitHub Pages
+### Built With
+* **Flutter** (Web)
+* **Dart**
 
 ---
 
-
-1. **Clone the repository:**
-   ```bash
-   git clone [https://github.com/emo2003/Emo_Portfolio.git]
+### Setup & Run
+```bash
+git clone [https://github.com/emo2003/Emo_Portfolio.git](https://github.com/emo2003/Emo_Portfolio.git)
+cd Emo_Portfolio
+flutter pub get
+flutter run -d chrome
