@@ -36,4 +36,4 @@ Check out the live interactive website:
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/emo2003/Emo_Portfolio.git](https://github.com/emo2003/Emo_Portfolio.git)
+   git clone [https://github.com/emo2003/Emo_Portfolio.git]
