@@ -1,20 +1,20 @@
 # Portfolio
 
-A personal portfolio website/app built with Flutter.
+A personal portfolio built with Flutter.
 
-## Preview
+## 🌐 Live Demo
 
-Screenshots and preview of the portfolio will be added here.
+[View Portfolio](https://emo2003.github.io/Emo_Portfolio/)
 
-## Built With
+## 🛠️ Built With
 
 * Flutter
 * Dart
 
-## Features
+## ✨ Features
 
-* Responsive UI
-* Modern design
+* Responsive design
+* Modern UI
 * Smooth navigation
 * Project showcase
 * Contact section
