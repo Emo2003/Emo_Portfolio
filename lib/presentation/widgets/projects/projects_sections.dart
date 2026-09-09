@@ -10,20 +10,20 @@ class ProjectsSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final double width = MediaQuery.sizeOf(context).width;
+    // Show all projects except the first one (CHEFAA) which is featured separately
+    final selectedProjects = projects.sublist(1);
 
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.symmetric(horizontal: 24),
       child: Center(
         child: ConstrainedBox(
-          constraints: const BoxConstraints(
-            maxWidth: 1120,
-          ),
+          constraints: const BoxConstraints(maxWidth: 1120),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               const Text(
-                '03',
+                '04',
                 style: TextStyle(
                   color: AppColors.purple,
                   fontSize: 13,
@@ -34,7 +34,7 @@ class ProjectsSection extends StatelessWidget {
               const SizedBox(height: 8),
 
               const Text(
-                'Selected Projects',
+                'Other Projects',
                 style: TextStyle(
                   color: AppColors.white,
                   fontSize: 36,
@@ -45,11 +45,8 @@ class ProjectsSection extends StatelessWidget {
               const SizedBox(height: 10),
 
               const Text(
-                'A selection of projects showcasing my Flutter development skills.',
-                style: TextStyle(
-                  color: AppColors.text,
-                  fontSize: 15,
-                ),
+                'Additional projects demonstrating my Flutter development skills.',
+                style: TextStyle(color: AppColors.text, fontSize: 15),
               ),
 
               const SizedBox(height: 30),
@@ -57,11 +54,9 @@ class ProjectsSection extends StatelessWidget {
               if (width < 700)
                 Column(
                   children: [
-                    for (int i = 0; i < projects.length; i++) ...[
-                      ProjectCard(
-                        project: projects[i],
-                      ),
-                      if (i != projects.length - 1)
+                    for (int i = 0; i < selectedProjects.length; i++) ...[
+                      ProjectCard(project: selectedProjects[i]),
+                      if (i != selectedProjects.length - 1)
                         const SizedBox(height: 18),
                     ],
                   ],
@@ -70,18 +65,15 @@ class ProjectsSection extends StatelessWidget {
                 GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
-                  itemCount: projects.length,
-                  gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
+                  itemCount: selectedProjects.length,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2,
                     crossAxisSpacing: 18,
-                    mainAxisSpacing: 18,
-                    mainAxisExtent: 395,
+                    mainAxisSpacing: 24,
+                    mainAxisExtent: 475,
                   ),
                   itemBuilder: (context, index) {
-                    return ProjectCard(
-                      project: projects[index],
-                    );
+                    return ProjectCard(project: selectedProjects[index]);
                   },
                 ),
             ],

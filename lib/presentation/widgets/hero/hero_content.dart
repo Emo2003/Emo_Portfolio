@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/resource/colors_manager.dart';
 import '../../../core/resource/constant_manager.dart';
 import '../../../core/resource/urls_manager.dart';
@@ -15,34 +16,28 @@ class HeroContent extends StatelessWidget {
     required this.onContact,
   });
 
+  void _downloadCv() {
+    UrlLauncherHelper.open('cv/EmanMedhatCV.pdf');
+  }
+
   @override
   Widget build(BuildContext context) {
-    final bool mobile =
-        MediaQuery.sizeOf(context).width < 600;
+    final bool mobile = MediaQuery.sizeOf(context).width < 600;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 13,
-            vertical: 8,
-          ),
+          padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 8),
           decoration: BoxDecoration(
             color: AppColors.green.withAlpha(20),
             borderRadius: BorderRadius.circular(30),
-            border: Border.all(
-              color: AppColors.green.withAlpha(50),
-            ),
+            border: Border.all(color: AppColors.green.withAlpha(50)),
           ),
           child: const Row(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Icon(
-                Icons.circle,
-                color: AppColors.green,
-                size: 7,
-              ),
+              Icon(Icons.circle, color: AppColors.green, size: 7),
               SizedBox(width: 8),
               Text(
                 AppStrings.available,
@@ -61,10 +56,7 @@ class HeroContent extends StatelessWidget {
 
         const Text(
           "Hi, I'm",
-          style: TextStyle(
-            color: AppColors.text,
-            fontSize: 19,
-          ),
+          style: TextStyle(color: AppColors.text, fontSize: 19),
         ),
 
         const SizedBox(height: 3),
@@ -72,10 +64,7 @@ class HeroContent extends StatelessWidget {
         ShaderMask(
           shaderCallback: (bounds) {
             return const LinearGradient(
-              colors: [
-                AppColors.white,
-                AppColors.purpleLight,
-              ],
+              colors: [AppColors.white, AppColors.purpleLight],
             ).createShader(bounds);
           },
           child: Text(
@@ -137,15 +126,10 @@ class HeroContent extends StatelessWidget {
           children: [
             ElevatedButton.icon(
               onPressed: onProjects,
-              icon: const Icon(
-                Icons.arrow_forward_rounded,
-                size: 16,
-              ),
+              icon: const Icon(Icons.arrow_forward_rounded, size: 16),
               label: const Text(
                 'View My Work',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
               style: ElevatedButton.styleFrom(
                 backgroundColor: AppColors.purple,
@@ -160,13 +144,32 @@ class HeroContent extends StatelessWidget {
                 ),
               ),
             ),
+
+            OutlinedButton.icon(
+              onPressed: _downloadCv,
+              icon: const Icon(Icons.download_rounded, size: 16),
+              label: const Text(
+                'Download CV',
+                style: TextStyle(fontWeight: FontWeight.bold),
+              ),
+              style: OutlinedButton.styleFrom(
+                foregroundColor: AppColors.white,
+                side: const BorderSide(color: AppColors.border),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 21,
+                  vertical: 16,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(11),
+                ),
+              ),
+            ),
+
             OutlinedButton(
               onPressed: onContact,
               style: OutlinedButton.styleFrom(
                 foregroundColor: AppColors.white,
-                side: const BorderSide(
-                  color: AppColors.border,
-                ),
+                side: const BorderSide(color: AppColors.border),
                 padding: const EdgeInsets.symmetric(
                   horizontal: 21,
                   vertical: 16,
@@ -177,9 +180,7 @@ class HeroContent extends StatelessWidget {
               ),
               child: const Text(
                 "Let's Talk",
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                ),
+                style: TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
           ],
@@ -191,10 +192,7 @@ class HeroContent extends StatelessWidget {
           children: [
             const Text(
               'Find me on',
-              style: TextStyle(
-                color: AppColors.muted,
-                fontSize: 10,
-              ),
+              style: TextStyle(color: AppColors.muted, fontSize: 10),
             ),
             const SizedBox(width: 12),
 
@@ -202,9 +200,7 @@ class HeroContent extends StatelessWidget {
               icon: Icons.code_rounded,
               tooltip: 'GitHub',
               onTap: () {
-                UrlLauncherHelper.open(
-                  AppUrls.github,
-                );
+                UrlLauncherHelper.open(AppUrls.github);
               },
             ),
 
@@ -214,9 +210,7 @@ class HeroContent extends StatelessWidget {
               icon: Icons.business_center_outlined,
               tooltip: 'LinkedIn',
               onTap: () {
-                UrlLauncherHelper.open(
-                  AppUrls.linkedIn,
-                );
+                UrlLauncherHelper.open(AppUrls.linkedIn);
               },
             ),
 
@@ -226,9 +220,7 @@ class HeroContent extends StatelessWidget {
               icon: Icons.email_outlined,
               tooltip: 'Email',
               onTap: () {
-                UrlLauncherHelper.open(
-                  AppUrls.email(),
-                );
+                UrlLauncherHelper.open(AppUrls.email());
               },
             ),
           ],

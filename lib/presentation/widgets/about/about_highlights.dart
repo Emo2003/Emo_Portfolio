@@ -12,19 +12,19 @@ class AboutHighlights extends StatelessWidget {
         Highlight(
           icon: Icons.layers_outlined,
           title: 'Clean Architecture',
-          text: 'Structured and maintainable codebases.',
+          text: 'Organizing application code in a clear, scalable way.',
         ),
         SizedBox(height: 11),
         Highlight(
           icon: Icons.account_tree_outlined,
           title: 'State Management',
-          text: 'BLoC and Cubit for predictable state.',
+          text: 'Using BLoC and Cubit to keep app behavior predictable.',
         ),
         SizedBox(height: 11),
         Highlight(
           icon: Icons.cloud_outlined,
-          title: 'API Integration',
-          text: 'REST APIs, Dio, JSON and authentication.',
+          title: 'Real Product Work',
+          text: 'Building applications with API integration, Firebase, and real user flows.',
         ),
       ],
     );

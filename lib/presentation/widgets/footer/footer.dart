@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import '../../../core/resource/colors_manager.dart';
 import '../../../core/resource/constant_manager.dart';
 import '../../../core/resource/urls_manager.dart';
@@ -12,16 +13,9 @@ class PortfolioFooter extends StatelessWidget {
     return Container(
       width: double.infinity,
       margin: const EdgeInsets.only(top: 80),
-      padding: const EdgeInsets.symmetric(
-        horizontal: 24,
-        vertical: 40,
-      ),
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 40),
       decoration: const BoxDecoration(
-        border: Border(
-          top: BorderSide(
-            color: AppColors.border,
-          ),
-        ),
+        border: Border(top: BorderSide(color: AppColors.border)),
       ),
       child: Column(
         children: [
@@ -39,10 +33,7 @@ class PortfolioFooter extends StatelessWidget {
 
           const Text(
             'Building mobile experiences with Flutter & Dart.',
-            style: TextStyle(
-              color: AppColors.muted,
-              fontSize: 10,
-            ),
+            style: TextStyle(color: AppColors.muted, fontSize: 10),
           ),
 
           const SizedBox(height: 18),
@@ -52,60 +43,47 @@ class PortfolioFooter extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  UrlLauncherHelper.open(
-                    AppUrls.github,
-                  );
+                  UrlLauncherHelper.open(AppUrls.github);
                 },
                 child: const Text(
                   'GitHub',
-                  style: TextStyle(
-                    color: AppColors.muted,
-                    fontSize: 10,
-                  ),
+                  style: TextStyle(color: AppColors.muted, fontSize: 10),
                 ),
               ),
 
-              const Text(
-                '•',
-                style: TextStyle(
-                  color: AppColors.border,
-                ),
-              ),
+              const Text('•', style: TextStyle(color: AppColors.border)),
 
               TextButton(
                 onPressed: () {
-                  UrlLauncherHelper.open(
-                    AppUrls.linkedIn,
-                  );
+                  UrlLauncherHelper.open(AppUrls.linkedIn);
                 },
                 child: const Text(
                   'LinkedIn',
-                  style: TextStyle(
-                    color: AppColors.muted,
-                    fontSize: 10,
-                  ),
+                  style: TextStyle(color: AppColors.muted, fontSize: 10),
                 ),
               ),
 
-              const Text(
-                '•',
-                style: TextStyle(
-                  color: AppColors.border,
-                ),
-              ),
+              const Text('•', style: TextStyle(color: AppColors.border)),
 
               TextButton(
                 onPressed: () {
-                  UrlLauncherHelper.open(
-                    AppUrls.email(),
-                  );
+                  UrlLauncherHelper.open(AppUrls.cv);
+                },
+                child: const Text(
+                  'CV',
+                  style: TextStyle(color: AppColors.muted, fontSize: 10),
+                ),
+              ),
+
+              const Text('•', style: TextStyle(color: AppColors.border)),
+
+              TextButton(
+                onPressed: () {
+                  UrlLauncherHelper.open(AppUrls.email());
                 },
                 child: const Text(
                   'Email',
-                  style: TextStyle(
-                    color: AppColors.muted,
-                    fontSize: 10,
-                  ),
+                  style: TextStyle(color: AppColors.muted, fontSize: 10),
                 ),
               ),
             ],
@@ -115,10 +93,7 @@ class PortfolioFooter extends StatelessWidget {
 
           Text(
             '© ${DateTime.now().year} ${AppStrings.name}. All rights reserved.',
-            style: const TextStyle(
-              color: Color(0xFF505561),
-              fontSize: 9,
-            ),
+            style: const TextStyle(color: Color(0xFF505561), fontSize: 9),
           ),
         ],
       ),
