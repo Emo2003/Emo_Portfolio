@@ -1,21 +1,21 @@
 import 'constant_manager.dart';
 
 class AppUrls {
-AppUrls._();
+  AppUrls._();
 
-static const String github = 'https://github.com/Emo2003';
+  static const String github = 'https://github.com/Emo2003';
 
-static const String linkedIn =
-'https://www.linkedin.com/in/eman-medhat-704008401/';
+  static const String linkedIn =
+      'https://www.linkedin.com/in/eman-medhat-704008401/';
 
-// Flutter Web
-static const String cv = 'assets/cv/EmanMedhatCV.pdf?v=2';
+  // Flutter Web
+  static const String cv = '/Emo_Portfolio/assets/cv/EmanMedhatCV.pdf?v=2';
 
-static String email() {
-return 'mailto:${AppStrings.email}';
-}
+  static String email() {
+    return 'mailto:${AppStrings.email}';
+  }
 
-static String phone() {
-return 'tel:${AppStrings.phone.replaceAll(' ', '')}';
-}
+  static String phone() {
+    return 'tel:${AppStrings.phone.replaceAll(' ', '')}';
+  }
 }
