@@ -17,7 +17,11 @@ class HeroContent extends StatelessWidget {
   });
 
   void _downloadCv() {
-    UrlLauncherHelper.open('cv/EmanMedhatCV.pdf');
+    final cvUrl = Uri.base.resolve(
+      'assets/cv/EmanMedhatCV.pdf',
+    );
+
+    UrlLauncherHelper.open(cvUrl.toString());
   }
 
   @override
