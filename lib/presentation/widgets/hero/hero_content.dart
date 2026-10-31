@@ -18,7 +18,7 @@ class HeroContent extends StatelessWidget {
 
   void _downloadCv() {
     final cvUrl = Uri.base.resolve(
-      'assets/cv/EmanMedhatCV.pdf',
+      'assets/cv/EmanMedhatCV.pdf?v=2',
     );
 
     UrlLauncherHelper.open(cvUrl.toString());
