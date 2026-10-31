@@ -61,7 +61,6 @@ flutter:
   # Assets required for the portfolio
   assets:
     - assets/images/
-    - assets/cv/
     - assets/certificates/
 
   # To add assets to your application, add an assets section, like this:

@@ -9,7 +9,7 @@ class AppUrls {
       'https://www.linkedin.com/in/eman-medhat-704008401/';
 
   // Flutter Web
-  static const String cv = '/Emo_Portfolio/assets/cv/EmanMedhatCV.pdf?v=2';
+  static const String cv = 'cv/EmanMedhatCV.pdf';
 
   static String email() {
     return 'mailto:${AppStrings.email}';
